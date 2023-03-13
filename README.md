@@ -9,14 +9,13 @@ The study includes voice data collected from patients while they verbaly respond
 - WTForm
 - Werkzeug
 - os
-- json
 
 ### Misc
 I ran the following Python code to generate a list of random participant ID's, then manually imported it into a database:
 
 ```
 import pandas as pd
-import random`
+import random
 df = pd.DataFrame(data = {'id': range(1, 201), 'participant_id': random.sample(range(10000, 100000), k = 200)})
 df.to_csv('participant_id.csv', index = False)
 ```
