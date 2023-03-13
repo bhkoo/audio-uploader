@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Upload{% endblock %}
+
+{% block content %}
+<h1 align = 'center'>Upload Files</h1>
+
+<form method = 'POST' enctype='multipart/form-data' autocomplete = 'off'>
+  {{ form.csrf_token }}
+  <fieldset>
+    <div class = 'mb-3' style = 'position: relative'>
+      <label class='form-label'>{{ form.participant_id.label }}</label>
+      {{ form.participant_id(class = 'form-control', placeholder = 'Enter participant ID (5 digits)', 
+                            maxlength = 5, autocomplete = 'off', onkeyup = 'formAutocomplete()') }}
+      <div id = 'suggestions'>
+      </div>
+    </div>
+    <div class = 'mb-3'>
+      <label for = 'task'>{{ form.task.label }}</label>
+      {% for subfield in form.task %}
+        <div class='form-check'>
+          {{ subfield(class = 'form-check-input', required = 'true') }}
+          {{ subfield.label(class = 'form-check-label') }}
+        </div>
+      {% endfor %}
+    </div>
+    <label for = 'comment'>{{ form.comment.label }}</label>
+    <div class = 'mb-3 form-floating'>
+      {{ form.comment(class = 'form-control') }}
+    </div>
+    <div class = 'mb-3'>
+      <label class = 'form-label' for = 'files'>{{ form.files.label }}</label>
+      {{ form.files(class = 'form-control') }}
+    </div>
+    <div class = 'mb-3 col text-center'>
+      {{ form.submit(class = 'btn btn-primary') }}
+    </div>
+  </fieldset>
+</form>
+{% endblock %}
+
