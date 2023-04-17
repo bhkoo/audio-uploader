@@ -2,7 +2,7 @@
 
 This respository is a Flask webpage used to upload audio files to a server. It's based on an internally used website I built (originally on a WAMP stack) back in 2018 as a research assistant at the Child Mind Institute, specifically for the [Healthy Brain Network Initiative](https://childmind.org/science/global-open-science/healthy-brain-network/), a large-scale research study on biomarkers of mental health disorders and part of an initiative to openly share anonymized research data with the scientific community. 
 
-The study includes voice data collected from patients while they verbaly respond to a series of questionnaires from research staff. Because of the high participant volume of the study, I was tasked with creating this website in order to allow research staff to upload audio files without having to worry about organizing or naming them, as well as save time for whomever would be analyzing the data in the future. I also added checks to make sure users wouldn't enter incorrect information like participant ID's.
+The study includes voice data collected from patients while they verbally respond to a series of questionnaires from research staff. Because of the high participant volume of the study, I was tasked with creating this website in order to allow research staff to upload audio files without having to worry about organizing or naming them, as well as save time for whomever would be analyzing the data in the future. I also added checks to make sure users wouldn't enter incorrect information like participant ID's.
 
 ### Python Packages
 - Flask
